@@ -18,30 +18,30 @@ public class SessionUtilTest
   public void testIsPrefixEqual() throws Exception
   {
     assertThat("no port number",
-        SessionUtil.isPrefixEqual(
-            "https://***REMOVED***/blah",
-            "https://***REMOVED***/"));
+               SessionUtil.isPrefixEqual(
+                   "https://***REMOVED***/blah",
+                   "https://***REMOVED***/"));
     assertThat("no port number with a slash",
-        SessionUtil.isPrefixEqual(
-            "https://***REMOVED***/blah",
-            "https://***REMOVED***"));
+               SessionUtil.isPrefixEqual(
+                   "https://***REMOVED***/blah",
+                   "https://***REMOVED***"));
     assertThat("including a port number on one of them",
-        SessionUtil.isPrefixEqual(
-            "https://***REMOVED***/blah",
-            "https://***REMOVED***/"));
+               SessionUtil.isPrefixEqual(
+                   "https://***REMOVED***/blah",
+                   "https://***REMOVED***/"));
 
     // negative
     assertThat("different hostnames",
-        !SessionUtil.isPrefixEqual(
-            "https://***REMOVED***/blah",
-            "https://***REMOVED***/"));
+               !SessionUtil.isPrefixEqual(
+                   "https://***REMOVED***/blah",
+                   "https://***REMOVED***/"));
     assertThat("different port numbers",
-        !SessionUtil.isPrefixEqual(
-            "https://***REMOVED***/blah",
-            "https://***REMOVED***/"));
+               !SessionUtil.isPrefixEqual(
+                   "https://***REMOVED***/blah",
+                   "https://***REMOVED***/"));
     assertThat("different protocols",
-        !SessionUtil.isPrefixEqual(
-            "http://***REMOVED***/blah",
-            "https://***REMOVED***/"));
+               !SessionUtil.isPrefixEqual(
+                   "http://***REMOVED***/blah",
+                   "https://***REMOVED***/"));
   }
 }

@@ -22,7 +22,7 @@ public class SFTrustManagerTest
       SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN = null;
       SFTrustManager.resetOCSPResponseCacherServerURL(
           "http://ocsp.us-east-***REMOVED***/" +
-              SFTrustManager.CACHE_FILE_NAME);
+          SFTrustManager.CACHE_FILE_NAME);
       assertThat(
           SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN,
           equalTo("http://ocsp.us-east-***REMOVED***/retry/%s/%s"));
@@ -33,7 +33,7 @@ public class SFTrustManagerTest
       SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN = null;
       SFTrustManager.resetOCSPResponseCacherServerURL(
           "http://ocsp.us-east-***REMOVED***/" +
-              SFTrustManager.CACHE_FILE_NAME);
+          SFTrustManager.CACHE_FILE_NAME);
       assertThat(
           SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN,
           equalTo("http://ocsp.us-east-***REMOVED***/retry/%s/%s"));
@@ -44,7 +44,7 @@ public class SFTrustManagerTest
       SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN = null;
       SFTrustManager.resetOCSPResponseCacherServerURL(
           "http://***REMOVED***/" +
-              SFTrustManager.CACHE_FILE_NAME);
+          SFTrustManager.CACHE_FILE_NAME);
       assertThat(
           SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN, nullValue());
 
@@ -54,7 +54,7 @@ public class SFTrustManagerTest
       SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN = null;
       SFTrustManager.resetOCSPResponseCacherServerURL(
           "http://***REMOVED***/" +
-              SFTrustManager.CACHE_FILE_NAME);
+          SFTrustManager.CACHE_FILE_NAME);
       assertThat(
           SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN, nullValue());
 
@@ -64,7 +64,7 @@ public class SFTrustManagerTest
       SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN = null;
       SFTrustManager.resetOCSPResponseCacherServerURL(
           "http://ocsp.us-east-***REMOVED***/" +
-              SFTrustManager.CACHE_FILE_NAME);
+          SFTrustManager.CACHE_FILE_NAME);
       assertThat(
           SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN,
           equalTo("http://ocsp.us-east-***REMOVED***/retry"));
@@ -75,7 +75,7 @@ public class SFTrustManagerTest
       SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN = null;
       SFTrustManager.resetOCSPResponseCacherServerURL(
           "http://ocsp.us-east-***REMOVED***/" +
-              SFTrustManager.CACHE_FILE_NAME);
+          SFTrustManager.CACHE_FILE_NAME);
       assertThat(
           SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN,
           equalTo("http://ocsp.us-east-***REMOVED***/retry"));
@@ -86,7 +86,7 @@ public class SFTrustManagerTest
       SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN = null;
       SFTrustManager.resetOCSPResponseCacherServerURL(
           "http://***REMOVED***/" +
-              SFTrustManager.CACHE_FILE_NAME);
+          SFTrustManager.CACHE_FILE_NAME);
       assertThat(
           SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN,
           equalTo("http://***REMOVED***/retry"));
@@ -97,7 +97,7 @@ public class SFTrustManagerTest
       SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN = null;
       SFTrustManager.resetOCSPResponseCacherServerURL(
           "http://***REMOVED***/" +
-              SFTrustManager.CACHE_FILE_NAME);
+          SFTrustManager.CACHE_FILE_NAME);
       // no port will be included but always the default URL.
       assertThat(
           SFTrustManager.SF_OCSP_RESPONSE_CACHE_SERVER_RETRY_URL_PATTERN,
