@@ -14,6 +14,7 @@ import java.util.Properties;
 import net.snowflake.client.ConditionalIgnoreRule;
 import net.snowflake.client.RunningOnGithubAction;
 import net.snowflake.client.category.TestCategoryOthers;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
@@ -741,5 +742,18 @@ public class DatabaseMetaDataLatestIT extends BaseJDBCTest {
     resultSet = metaData.getColumns(database, schema, "special" + escapeChar + "%table", null);
     assertTrue(resultSet.next());
     assertEquals("COLA", resultSet.getString("COLUMN_NAME"));
+  }
+
+  /*
+   * This tests that an empty resultset will be returned for getProcedures when using a reader account.
+   */
+  @Test
+  @Ignore
+  public void testGetProceduresWithReaderAccount() throws SQLException {
+    try (Connection connection = getConnection()) {
+      DatabaseMetaData metadata = connection.getMetaData();
+      ResultSet rs = metadata.getProcedures(null, null, null);
+      assertEquals(0, getSizeOfResultSet(rs));
+    }
   }
 }
