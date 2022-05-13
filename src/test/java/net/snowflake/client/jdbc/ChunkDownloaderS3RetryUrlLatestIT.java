@@ -1,8 +1,10 @@
+/*
+ * Copyright (c) 2012-2022 Snowflake Computing Inc. All rights reserved.
+ */
 package net.snowflake.client.jdbc;
 
 import static net.snowflake.client.AbstractDriverIT.getConnection;
 import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -21,7 +23,7 @@ import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
 @Category(TestCategoryOthers.class)
-public class ChunkDownloaderS3RetryUrl {
+public class ChunkDownloaderS3RetryUrlLatestIT {
 
   private Connection connection;
   private SFStatement sfStatement;
